@@ -1,0 +1,32 @@
+{
+    "videos": [
+      {
+        "id": "orange",
+        "nextVideoOptions": ["red","yellow"]
+      },
+      {
+        "id": "red",
+        "nextVideoOptions": ["purple","pink"]
+      },
+      {
+        "id": "yellow",
+        "nextVideoOptions": ["green","blue"]
+      },
+      {
+        "id": "purple",
+        "nextVideoOptions": ["orange"]
+      },
+      {
+        "id": "pink",
+        "nextVideoOptions": ["orange"]
+      },
+      {
+        "id": "green",
+        "nextVideoOptions": ["orange"]
+      },
+      {
+        "id": "blue",
+        "nextVideoOptions": ["orange"]
+      }
+    ]
+  }

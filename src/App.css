@@ -1,38 +1,90 @@
+*{
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: none;
+}
+:root{
+  --shadow: drop-shadow(2px 4px 6px #ccc);
+  --shadow-hover: drop-shadow(5px 8px 8px #bbb);
+}
 .App {
+  position: absolute;
+  height: 100%;
+  overflow: hidden;
   text-align: center;
+  font-family: Arial;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.live-data{
+  position: absolute;
+  top: 0;
+  right: 10px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.welcome-message {
+  position: absolute;
+  z-index: 1;
+  height: 100%;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: rgba(255,255,255,.9);
 }
-
-.App-link {
-  color: #61dafb;
+.welcome-message h1 {
+  font-size: 52px;
+  line-height: 60px;
+  margin-top: 100px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.welcome-message button {
+  width: 300px;
+  height: 100px;
+  font-size: 52px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 8px;
+  color: #444;
+  border: 1px solid;
+  filter: var(--shadow);
+  cursor: pointer;
+}
+.welcome-message button:hover {
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(240,240,240,1) 80%, rgba(200,200,200,1) 100%);
+  filter: var(--shadow-hover);
+}
+.options-container {
+  position: absolute;
+  width: 98%;
+  height: auto;
+  max-height: 180px;
+  bottom: 0;
+  left: 1%;
+  padding: 20px;
+  display: grid;
+    gap: 20px;
+  grid-template-columns: repeat(auto-fit,minmax(205px,1fr));
+  background-color: #e2e2e2;
+    border-top: 1px solid #777;
+    border-left: 1px solid #777;
+    border-right: 1px solid #777;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  transition: all 1s ease;
+  transform: translateY(180px)
+}
+.options-container button {
+  background: rgb(255,255,255);
+  border: 1px solid #444;
+  border-radius: 4px;
+  cursor: pointer;
+  filter: var(--shadow);
+  font-size: 42px;
+  line-height: 54px;
+}
+.options-container button:hover {
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(240,240,240,1) 80%, rgba(200,200,200,1) 100%);
+  filter: var(--shadow-hover);
 }
